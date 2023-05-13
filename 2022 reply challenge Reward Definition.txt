@@ -1,0 +1,4 @@
+Reward Accrual Definition
+Rewards per turn are based on each fragment attributted to turns that occurs after defeating a demon.
+Each reward per turn will be the sum of fragments obtained, relative to the progression of pandora and the turn after the demon was defeated. 
+Total Reward will be the cumulations of all the rewards per turn summed together.
