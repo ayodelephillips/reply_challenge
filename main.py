@@ -9,12 +9,16 @@ def read_file():
                              ,header = None
                             , names = colnames
                              )
-    # print(file_import_df['Enemy'].loc[])
-    # print(file_import_df[2])
-    return file_import_df
+    player = file_import_df['Enemy'].loc[0]
+    red_demon = file_import_df['Enemy'].loc[1]
+    teal_demon = file_import_df['Enemy'].loc[2]
+    orange_demon = file_import_df['Enemy'].loc[3]
+    violet_demon = file_import_df['Enemy'].loc[4]
+    brown_demon = file_import_df['Enemy'].loc[5]
+    return print(player)
 read_file()
-# print(file_import_df.head(9))
-# file_import_df = file_import_df.replace(' ',',', regex = True)
-# print(file_import_df.head(10))
 
+def constraints_define():
+    ##dictionaries for player and demon constraints.
+    pass
 
