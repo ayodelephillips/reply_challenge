@@ -17,7 +17,7 @@ class Simulation:
         # scoring
         self.turns_and_rewards_details: pd.DataFrame = None # table in the reply sheet; add in column for sequences
 
-    def run_simulation(self):
+    def run_simulation(self, sequence):
         """
         run the simulations
         :return:
