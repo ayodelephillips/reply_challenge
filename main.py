@@ -17,12 +17,6 @@ class Simulation:
         # scoring
         self.turns_and_rewards_details: pd.DataFrame = None # table in the reply sheet; add in column for sequences
 
-    def run_simulation(self, sequence):
-        """
-        run the simulations
-        :return:
-        """
-
     def run(self):
         # read file
         data = read_file()
@@ -41,7 +35,49 @@ class Simulation:
         for sequence in simulation_sequence:
             self.run_simulation(sequence)
 
+    def stamina_rule_set(self):
+        """
+        Demon is defeated by deducting stamina
+        Stamina is deducted each turn then added back after
+        defeating the enemy
+         """
+        p_stamina = int(self.starting_stamina_pt)
+        e_stamina = self.enemies_details.iloc[0,0].astype('int')
+
+        if p_stamina >= e_stamina:
+           p_stamina -= e_stamina
+           stamina_recovery_turns = self.enemies_details.iloc[0,1]
+           stamina_recovery = self.enemies_details.iloc[0,2]
+        else:
+            # return turns_rule_set()
+            pass
+
+
+    def turns_rule_set(self, p_turns, e_turns_to_beat):
+        """"
+         Max turns = 10
+        1 enemy per turn
+        after turn 'stamina_recovery_turns' stamina increase by 'stamina_recovery'
+        in turn collect stamina, then face enemy, then collect fragment
+        in each turn you can revoer all stamina from defested demons
+        fragment collecting will last a maximum of t runs
+        A variable is stored to count total turns"""
+
+
+        pass
+
+
+    def enemy_details(self, e_defeatturns, e_defeatstamina):
+        pass
+
+    def run_simulation(self, sequence):
+        """
+        run the simulations
+        :return:
+        """
+        pass
 
 if __name__ == "__main__":
     simulation = Simulation()
     simulation.run()
+    # simulation.stamina_rule_set()
